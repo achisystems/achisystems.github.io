@@ -1,1 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Design in Nairobi 0720500058 & Online Marketing Services | Achi Systems</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e3a5f;
+            --secondary-color: #ffffff;
+            --accent-color: #2c5aa0;
+            --light-blue: #f8faff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background: var(--primary-color) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--secondary-color) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: var(--secondary-color);
+            padding: 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-custom {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            color: var(--primary-color);
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .service-card {
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .carousel-item {
+            height: 400px;
+            background: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+        }
+        
+        .floating-buttons {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        .call-btn {
+            background: #28a745;
+        }
+        
+        .whatsapp-btn {
+            background: #25d366;
+        }
+        
+        .website-btn {
+            background: var(--accent-color);
+        }
+        
+        .faq-item {
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .faq-header {
+            background: var(--light-blue);
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-header:hover {
+            background: #e3f2fd;
+        }
+        
+        .faq-body {
+            padding: 20px;
+            background: white;
+        }
+        
+        .contact-section {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        
+        .contact-info {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .table-custom {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .table-custom th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 20px;
+        }
+        
+        .table-custom td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .floating-buttons {
+                right: 15px;
+                bottom: 15px;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+	
+<meta name="description" content="Work With Nairobi’s top website designers and branding experts. Aᴄʜɪ Sʏsᴛᴇᴍs offers creative website design in Nairobi, graphics design, Web applicatio">
+<meta property="og:title" content="Web Design Services in Nairobi Kenya, Digital Marketing Service">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://achisystems.co.ke/wp-content/uploads/2025/01/website-design-service-nairobi-kenya-1024x602.png">
+<meta property="og:description" content="Work With Nairobi’s top website designers and branding experts. Aᴄʜɪ Sʏsᴛᴇᴍs offers creative website design services in Nairobi, graphics design, Web applicatio">
+<meta property="og:url" content="https://achisystems.github.io/">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Achi Systems">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://achisystems.co.ke/wp-content/uploads/2025/01/website-design-service-nairobi-kenya-1024x602.png">
+<meta name="twitter:site" content="@achisystems">	
+	
+	
+	
+	
+<script type='application/ld+json'>
+{
+	"@context": "http://schema.org",
+	"@type": "achisystems.co.ke",
+	"legalName": "Achi Systems",
+	"url": "https://achisystems.github.io/",
+	"logo": "https://achisystems.co.ke/wp-content/uploads/2025/04/logo-dark.png",
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+25472050059",
+		"contactType": ""
+	},
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "Mpaka Road",
+		"addressLocality": "Westlands",
+		"addressRegion": "Nairobi",
+		"postalCode": "91ABCD",
+		"addressCountry": "Kenya"
+	},
+	"sameAs": [
+		"https://achisystems.co.ke",
+		"https://twitter.com/achisystems",
+		"https://www.facebook.com/achisystems.co.ke",
+		"https://ke.linkedin.com/company/achisystems"
+	]
+}
+</script>	
+	
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-code me-2"></i>Achi Systems
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title">Professional Web Design & Online Marketing</h1>
+                    <p class="hero-subtitle">Transform your business with stunning websites and powerful digital marketing strategies. Based in Westlands, Nairobi, Kenya.</p>
+                    <a href="#contact" class="btn btn-custom btn-lg">Get Started Today</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <i class="fas fa-laptop-code" style="font-size: 15rem; opacity: 0.3;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-desktop service-icon"></i>
+                            <h5 class="card-title">Web Design & Development</h5>
+                            <p class="card-text">Custom websites that are responsive, fast, and optimized for conversions. We create modern designs that reflect your brand.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-shopping-cart service-icon"></i>
+                            <h5 class="card-title">E-commerce Solutions</h5>
+                            <p class="card-text">Complete online store development with payment integration, inventory management, and user-friendly shopping experiences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-search service-icon"></i>
+                            <h5 class="card-title">SEO Optimization</h5>
+                            <p class="card-text">Improve your search engine rankings and drive organic traffic with our proven SEO strategies and techniques.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-bullhorn service-icon"></i>
+                            <h5 class="card-title">Digital Marketing</h5>
+                            <p class="card-text">Comprehensive online marketing campaigns including social media, PPC advertising, and content marketing strategies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-mobile-alt service-icon"></i>
+                            <h5 class="card-title">Mobile App Development</h5>
+                            <p class="card-text">Native and cross-platform mobile applications that provide seamless user experiences across all devices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-tools service-icon"></i>
+                            <h5 class="card-title">Website Maintenance</h5>
+                            <p class="card-text">Ongoing support, updates, and maintenance to keep your website secure, fast, and running smoothly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Carousel -->
+    <section id="portfolio" class="section-padding" style="background: var(--light-blue);">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                            <i class="fas fa-store" style="font-size: 5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <h3>E-commerce Platform</h3>
+                            <p class="text-center">Modern online store with advanced features</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                            <i class="fas fa-building" style="font-size: 5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <h3>Corporate Website</h3>
+                            <p class="text-center">Professional business presence online</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                            <i class="fas fa-utensils" style="font-size: 5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                            <h3>Restaurant Website</h3>
+                            <p class="text-center">Beautiful food presentation with online ordering</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section id="pricing" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Pricing Packages</h2>
+            <div class="table-responsive">
+                <table class="table table-custom">
+                    <thead>
+                        <tr>
+                            <th>Package</th>
+                            <th>Features</th>
+                            <th>Timeline</th>
+                            <th>Price (KES)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Basic Website</strong></td>
+                            <td>5 Pages, Responsive Design, Contact Form</td>
+                            <td>1-2 Weeks</td>
+                            <td>KES 25,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Business Website</strong></td>
+                            <td>10 Pages, CMS, SEO Optimization, Analytics</td>
+                            <td>2-3 Weeks</td>
+                            <td>KES 50,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E-commerce Store</strong></td>
+                            <td>Product Catalog, Payment Gateway, Order Management</td>
+                            <td>3-4 Weeks</td>
+                            <td>KES 80,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custom Solution</strong></td>
+                            <td>Tailored Features, Advanced Functionality</td>
+                            <td>4-8 Weeks</td>
+                            <td>Contact Us</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding" style="background: var(--light-blue);">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <h6 class="mb-0">How much does a website cost in Nairobi?</h6>
+                            </div>
+                            <div id="faq1" class="collapse show" data-bs-parent="#faqAccordion">
+                                <div class="faq-body">
+                                    Website costs in Nairobi range from KES 25,000 for a basic website to KES 100,000+ for complex e-commerce solutions. The price depends on features, design complexity, and functionality requirements.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <h6 class="mb-0">How long does it take to build a website?</h6>
+                            </div>
+                            <div id="faq2" class="collapse" data-bs-parent="#faqAccordion">
+                                <div class="faq-body">
+                                    A basic website takes 1-2 weeks, while complex websites can take 4-8 weeks. Timeline depends on content preparation, revisions, and feature complexity.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <h6 class="mb-0">Do you provide website maintenance services?</h6>
+                            </div>
+                            <div id="faq3" class="collapse" data-bs-parent="#faqAccordion">
+                                <div class="faq-body">
+                                    Yes, we offer comprehensive maintenance packages including security updates, content updates, backups, and technical support starting from KES 5,000 per month.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                <h6 class="mb-0">Will my website be mobile-friendly?</h6>
+                            </div>
+                            <div id="faq4" class="collapse" data-bs-parent="#faqAccordion">
+                                <div class="faq-body">
+                                    Absolutely! All our websites are fully responsive and optimized for mobile devices, tablets, and desktops to ensure the best user experience across all platforms.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                <h6 class="mb-0">Do you offer SEO services in Nairobi?</h6>
+                            </div>
+                            <div id="faq5" class="collapse" data-bs-parent="#faqAccordion">
+                                <div class="faq-body">
+                                    Yes, we provide comprehensive SEO services including keyword research, on-page optimization, content strategy, and local SEO to help your business rank higher on Google.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                <h6 class="mb-0">Can you redesign my existing website?</h6>
+                            </div>
+                            <div id="faq6" class="collapse" data-bs-parent="#faqAccordion">
+                                <div class="faq-body">
+                                    Yes, we specialize in website redesigns. We can improve your current website's design, functionality, and performance while maintaining your existing content and SEO rankings.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                <h6 class="mb-0">Do you create e-commerce websites?</h6>
+                            </div>
+                            <div id="faq7" class="collapse" data-bs-parent="#faqAccordion">
+                                <div class="faq-body">
+                                    Yes, we build complete e-commerce solutions with product catalogs, shopping carts, payment gateways (M-Pesa, card payments), and inventory management systems.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                <h6 class="mb-0">What payment methods do you accept?</h6>
+                            </div>
+                            <div id="faq8" class="collapse" data-bs-parent="#faqAccordion">
+                                <div class="faq-body">
+                                    We accept bank transfers, M-Pesa payments, and cash payments. We require a 50% deposit to start the project and the remaining 50% upon completion.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq9">
+                                <h6 class="mb-0">Do you provide hosting and domain services?</h6>
+                            </div>
+                            <div id="faq9" class="collapse" data-bs-parent="#faqAccordion">
+                                <div class="faq-body">
+                                    Yes, we provide reliable web hosting services and can help you register and manage your domain name. We also offer website migration services.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq10">
+                                <h6 class="mb-0">Can I update my website content myself?</h6>
+                            </div>
+                            <div id="faq10" class="collapse" data-bs-parent="#faqAccordion">
+                                <div class="faq-body">
+                                    Yes, we build websites with user-friendly content management systems (CMS) that allow you to easily update text, images, and other content without technical knowledge.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <h2 class="section-title text-white">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h5><i class="fas fa-map-marker-alt me-2"></i>Location</h5>
+                        <p>Westlands, Nairobi, Kenya</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h5><i class="fas fa-phone me-2"></i>Phone</h5>
+                        <p><a href="tel:0720500058" class="text-white">0720500058</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h5><i class="fas fa-envelope me-2"></i>Email</h5>
+                        <p><a href="mailto:hello@achisystems.co.ke" class="text-white">hello@achisystems.co.ke</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">Visit our main website: <a href="https://achisystems.co.ke" class="text-white">achisystems.co.ke</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Achi Systems. All rights reserved. Professional Web Design & Online Marketing Services in Nairobi, Kenya.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:0720500058" class="floating-btn call-btn" title="Call Us">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/254720500058" class="floating-btn whatsapp-btn" title="WhatsApp Chat" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://achisystems.co.ke/" class="floating-btn website-btn" title="Visit Website" target="_blank">
+            <i class="fas fa-globe"></i>
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active class to navbar items on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
