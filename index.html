@@ -123,117 +123,163 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="https://achisystems.github.io/">
-                <img src="https://raw.githubusercontent.com/achisystems/achisystems.github.io/refs/heads/main/logo-dark.png" width="100">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pricing">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#faq">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" itemscope itemtype="https://schema.org/SiteNavigationElement">
+    <div class="container">
+        <a class="navbar-brand" href="https://achisystems.github.io/" itemprop="url">
+            <img src="https://raw.githubusercontent.com/achisystems/achisystems.github.io/refs/heads/main/logo-dark.png" width="100" alt="Achi Systems Logo" itemprop="logo">
+            <meta itemprop="name" content="Achi Systems">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" itemprop="name">
+                    <a class="nav-link" href="#home" itemprop="url">Home</a>
+                </li>
+                <li class="nav-item" itemprop="name">
+                    <a class="nav-link" href="#services" itemprop="url">Services</a>
+                </li>
+                <li class="nav-item" itemprop="name">
+                    <a class="nav-link" href="#portfolio" itemprop="url">Portfolio</a>
+                </li>
+                <li class="nav-item" itemprop="name">
+                    <a class="nav-link" href="#pricing" itemprop="url">Pricing</a>
+                </li>
+                <li class="nav-item" itemprop="name">
+                    <a class="nav-link" href="#faq" itemprop="url">FAQ</a>
+                </li>
+                <li class="nav-item" itemprop="name">
+                    <a class="nav-link" href="#contact" itemprop="url">Contact</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-title">Professional Website Design in Nairobi & Digital Marketing Services</h1>
-                    <p class="hero-subtitle">Transform your business with stunning websites and powerful digital marketing strategies. Based in Westlands, Nairobi, Kenya.</p>
-                    <a href="tel:+254720500058" class="btn btn-custom btn-lg">Get Started Today</a>
+   <!-- Hero Section with Schema.org Microdata -->
+<section id="home" class="hero-section" itemscope itemtype="https://schema.org/WebPage">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="hero-title" itemprop="name">Professional Website Design in Nairobi & Digital Marketing Services</h1>
+                <p class="hero-subtitle" itemprop="description">Transform your business with stunning websites and powerful digital marketing strategies. Based in Westlands, Nairobi, Kenya.</p>
+                
+                <!-- Service Offer Schema -->
+                <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Service">
+                    <meta itemprop="serviceType" content="Website Design and Digital Marketing">
+                    <meta itemprop="provider" content="Achi Systems">
+                    <div itemprop="areaServed" itemscope itemtype="https://schema.org/Place">
+                        <meta itemprop="name" content="Nairobi, Kenya">
+                        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                            <meta itemprop="addressLocality" content="Westlands">
+                            <meta itemprop="addressRegion" content="Nairobi">
+                            <meta itemprop="addressCountry" content="Kenya">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <img src="https://raw.githubusercontent.com/achisystems/achisystems.github.io/refs/heads/main/web-design-nairobi-kenya-achisystems.co.ke.png" class="img-fluid rounded border"/>
-                </div>
+                
+                <a href="tel:+254720500058" class="btn btn-custom btn-lg" itemprop="potentialAction" itemscope itemtype="https://schema.org/CommunicateAction">
+                    <meta itemprop="target" content="tel:+254720500058">
+                    Get Started Today
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://raw.githubusercontent.com/achisystems/achisystems.github.io/refs/heads/main/web-design-nairobi-kenya-achisystems.co.ke.png" 
+                     class="img-fluid rounded border"
+                     itemprop="image"
+                     itemscope 
+                     itemtype="https://schema.org/ImageObject"
+                     alt="Website Design Services in Nairobi Kenya by Achi Systems"/>
+                <meta itemprop="url" content="https://raw.githubusercontent.com/achisystems/achisystems.github.io/refs/heads/main/web-design-nairobi-kenya-achisystems.co.ke.png">
+                <meta itemprop="description" content="Professional website design and digital marketing services in Nairobi, Kenya">
             </div>
         </div>
-    </section>
+    </div>
+    
+    <!-- Breadcrumb Navigation Schema -->
+    <nav itemprop="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <meta itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1">
+        <meta itemprop="name" content="Home">
+        <meta itemprop="item" content="https://achisystems.co.ke/#home">
+    </nav>
+</section>
 
     <!-- Services Section -->
-    <section id="services" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-desktop service-icon"></i>
-                            <h5 class="card-title">Web Design & Development</h5>
-                            <p class="card-text">Custom websites that are responsive, fast, and optimized for conversions. We create modern designs that reflect your brand.</p>
-                        </div>
+<section id="services" class="section-padding" itemscope itemtype="https://schema.org/ItemList">
+    <div class="container">
+        <h2 class="section-title" itemprop="name">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                <div class="card service-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-desktop service-icon"></i>
+                        <h5 class="card-title" itemprop="name">Web Design & Development</h5>
+                        <p class="card-text" itemprop="description">Custom websites that are responsive, fast, and optimized for conversions. We create modern designs that reflect your brand.</p>
+                        <meta itemprop="serviceType" content="Web Design">
+                        <meta itemprop="provider" content="Achi Systems" itemscope itemtype="https://schema.org/Organization">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-shopping-cart service-icon"></i>
-                            <h5 class="card-title">E-commerce Solutions</h5>
-                            <p class="card-text">Complete online store development with payment integration, inventory management, and user-friendly shopping experiences.</p>
-                        </div>
+            </div>
+            <div class="col-lg-4 col-md-6" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                <div class="card service-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-shopping-cart service-icon"></i>
+                        <h5 class="card-title" itemprop="name">E-commerce Solutions</h5>
+                        <p class="card-text" itemprop="description">Complete online store development with payment integration, inventory management, and user-friendly shopping experiences.</p>
+                        <meta itemprop="serviceType" content="E-commerce Development">
+                        <meta itemprop="provider" content="Achi Systems" itemscope itemtype="https://schema.org/Organization">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-search service-icon"></i>
-                            <h5 class="card-title">SEO Optimization</h5>
-                            <p class="card-text">Improve your search engine rankings and drive organic traffic with our proven SEO strategies and techniques.</p>
-                        </div>
+            </div>
+            <div class="col-lg-4 col-md-6" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                <div class="card service-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-search service-icon"></i>
+                        <h5 class="card-title" itemprop="name">SEO Optimization</h5>
+                        <p class="card-text" itemprop="description">Improve your search engine rankings and drive organic traffic with our proven SEO strategies and techniques.</p>
+                        <meta itemprop="serviceType" content="Search Engine Optimization">
+                        <meta itemprop="provider" content="Achi Systems" itemscope itemtype="https://schema.org/Organization">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-bullhorn service-icon"></i>
-                            <h5 class="card-title">Digital Marketing</h5>
-                            <p class="card-text">Comprehensive online marketing campaigns including social media, PPC advertising, and content marketing strategies.</p>
-                        </div>
+            </div>
+            <div class="col-lg-4 col-md-6" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                <div class="card service-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-bullhorn service-icon"></i>
+                        <h5 class="card-title" itemprop="name">Digital Marketing</h5>
+                        <p class="card-text" itemprop="description">Comprehensive online marketing campaigns including social media, PPC advertising, and content marketing strategies.</p>
+                        <meta itemprop="serviceType" content="Digital Marketing">
+                        <meta itemprop="provider" content="Achi Systems" itemscope itemtype="https://schema.org/Organization">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-mobile-alt service-icon"></i>
-                            <h5 class="card-title">Mobile App Development</h5>
-                            <p class="card-text">Native and cross-platform mobile applications that provide seamless user experiences across all devices.</p>
-                        </div>
+            </div>
+            <div class="col-lg-4 col-md-6" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                <div class="card service-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-mobile-alt service-icon"></i>
+                        <h5 class="card-title" itemprop="name">Mobile App Development</h5>
+                        <p class="card-text" itemprop="description">Native and cross-platform mobile applications that provide seamless user experiences across all devices.</p>
+                        <meta itemprop="serviceType" content="Mobile Application Development">
+                        <meta itemprop="provider" content="Achi Systems" itemscope itemtype="https://schema.org/Organization">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card service-card">
-                        <div class="card-body text-center p-4">
-                            <i class="fas fa-tools service-icon"></i>
-                            <h5 class="card-title">Website Maintenance</h5>
-                            <p class="card-text">Ongoing support, updates, and maintenance to keep your website secure, fast, and running smoothly.</p>
-                        </div>
+            </div>
+            <div class="col-lg-4 col-md-6" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
+                <div class="card service-card">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-tools service-icon"></i>
+                        <h5 class="card-title" itemprop="name">Website Maintenance</h5>
+                        <p class="card-text" itemprop="description">Ongoing support, updates, and maintenance to keep your website secure, fast, and running smoothly.</p>
+                        <meta itemprop="serviceType" content="Website Maintenance">
+                        <meta itemprop="provider" content="Achi Systems" itemscope itemtype="https://schema.org/Organization">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Portfolio Carousel -->
     <section id="portfolio" class="section-padding" style="background: var(--light-blue);">
@@ -256,49 +302,108 @@ But we don't stop at website design. In the competitive Kenyan market, having a 
     </section>
 
     <!-- Pricing Table -->
-    <section id="pricing" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Pricing Packages</h2>
-            <div class="table-responsive">
-                <table class="table table-custom">
-                    <thead>
-                        <tr>
-                            <th>Package</th>
-                            <th>Features</th>
-                            <th>Timeline</th>
-                            <th>Price (KES)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Basic Website</strong></td>
-                            <td>5 Pages, Responsive Design, Contact Form</td>
-                            <td>1-2 Weeks</td>
-                            <td>KES 25,000</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Business Website</strong></td>
-                            <td>10 Pages, CMS, SEO Optimization, Analytics</td>
-                            <td>2-3 Weeks</td>
-                            <td>KES 50,000</td>
-                        </tr>
-                        <tr>
-                            <td><strong>E-commerce Store</strong></td>
-                            <td>Product Catalog, Payment Gateway, Order Management</td>
-                            <td>3-4 Weeks</td>
-                            <td>KES 80,000</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Custom Solution</strong></td>
-                            <td>Tailored Features, Advanced Functionality</td>
-                            <td>4-8 Weeks</td>
-                            <td>Contact Us</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+<section id="pricing" class="section-padding" itemscope itemtype="https://schema.org/ItemList">
+    <div class="container">
+        <h2 class="section-title" itemprop="name">Pricing Packages</h2>
+        <meta itemprop="description" content="Website development pricing packages and services">
+        
+        <div class="table-responsive">
+            <table class="table table-custom">
+                <thead>
+                    <tr>
+                        <th>Package</th>
+                        <th>Features</th>
+                        <th>Timeline</th>
+                        <th>Price (KES)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Basic Website Package -->
+                    <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="position" content="1">
+                        <td><strong itemprop="name">Basic Website</strong></td>
+                        <td itemprop="description">5 Pages, Responsive Design, Contact Form</td>
+                        <td>
+                            <span itemprop="deliveryLeadTime" itemscope itemtype="https://schema.org/QuantitativeValue">
+                                <meta itemprop="minValue" content="1">
+                                <meta itemprop="maxValue" content="2">
+                                <meta itemprop="unitText" content="WEEK">
+                                1-2 Weeks
+                            </span>
+                        </td>
+                        <td>
+                            <span itemprop="price" content="25000">KES 25,000</span>
+                            <meta itemprop="priceCurrency" content="KES">
+                            <meta itemprop="availability" content="https://schema.org/InStock">
+                        </td>
+                    </tr>
+                    
+                    <!-- Business Website Package -->
+                    <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="position" content="2">
+                        <td><strong itemprop="name">Business Website</strong></td>
+                        <td itemprop="description">10 Pages, CMS, SEO Optimization, Analytics</td>
+                        <td>
+                            <span itemprop="deliveryLeadTime" itemscope itemtype="https://schema.org/QuantitativeValue">
+                                <meta itemprop="minValue" content="2">
+                                <meta itemprop="maxValue" content="3">
+                                <meta itemprop="unitText" content="WEEK">
+                                2-3 Weeks
+                            </span>
+                        </td>
+                        <td>
+                            <span itemprop="price" content="50000">KES 50,000</span>
+                            <meta itemprop="priceCurrency" content="KES">
+                            <meta itemprop="availability" content="https://schema.org/InStock">
+                        </td>
+                    </tr>
+                    
+                    <!-- E-commerce Store Package -->
+                    <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="position" content="3">
+                        <td><strong itemprop="name">E-commerce Store</strong></td>
+                        <td itemprop="description">Product Catalog, Payment Gateway, Order Management</td>
+                        <td>
+                            <span itemprop="deliveryLeadTime" itemscope itemtype="https://schema.org/QuantitativeValue">
+                                <meta itemprop="minValue" content="3">
+                                <meta itemprop="maxValue" content="4">
+                                <meta itemprop="unitText" content="WEEK">
+                                3-4 Weeks
+                            </span>
+                        </td>
+                        <td>
+                            <span itemprop="price" content="80000">KES 80,000</span>
+                            <meta itemprop="priceCurrency" content="KES">
+                            <meta itemprop="availability" content="https://schema.org/InStock">
+                        </td>
+                    </tr>
+                    
+                    <!-- Custom Solution Package -->
+                    <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="position" content="4">
+                        <td><strong itemprop="name">Custom Solution</strong></td>
+                        <td itemprop="description">Tailored Features, Advanced Functionality</td>
+                        <td>
+                            <span itemprop="deliveryLeadTime" itemscope itemtype="https://schema.org/QuantitativeValue">
+                                <meta itemprop="minValue" content="4">
+                                <meta itemprop="maxValue" content="8">
+                                <meta itemprop="unitText" content="WEEK">
+                                4-8 Weeks
+                            </span>
+                        </td>
+                        <td>
+                            <span itemprop="priceSpecification" itemscope itemtype="https://schema.org/PriceSpecification">
+                                <meta itemprop="priceCurrency" content="KES">
+                                Contact Us
+                            </span>
+                            <meta itemprop="availability" content="https://schema.org/InStock">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </section>
+    </div>
+</section>
 
 
 <section class="py-5" style="background-color: #f8f9fa;">
@@ -819,36 +924,54 @@ But we don't stop at website design. In the competitive Kenyan market, having a 
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section section-padding">
-        <div class="container">
-            <h2 class="section-title text-white">Get In Touch</h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="contact-info">
-                        <h5><i class="fas fa-map-marker-alt me-2"></i>Location</h5>
-                        <p>Westlands, Nairobi, Kenya</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact-info">
-                        <h5><i class="fas fa-phone me-2"></i>Phone</h5>
-                        <p><a href="tel:0720500058" class="text-white">0720500058</a></p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact-info">
-                        <h5><i class="fas fa-envelope me-2"></i>Email</h5>
-                        <p><a href="mailto:hello@achisystems.co.ke" class="text-white">hello@achisystems.co.ke</a></p>
-                    </div>
+<section id="contact" class="contact-section section-padding" itemscope itemtype="https://schema.org/LocalBusiness">
+    <div class="container">
+        <h2 class="section-title text-white">Get In Touch</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="contact-info" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                    <h5><i class="fas fa-map-marker-alt me-2"></i>Location</h5>
+                    <p>
+                        <span itemprop="addressLocality">Westlands</span>, 
+                        <span itemprop="addressRegion">Nairobi</span>, 
+                        <span itemprop="addressCountry">Kenya</span>
+                    </p>
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <p class="mb-0">Visit our main website: <a href="https://achisystems.co.ke" class="text-white">achisystems.co.ke</a></p>
+            <div class="col-lg-4">
+                <div class="contact-info">
+                    <h5><i class="fas fa-phone me-2"></i>Phone</h5>
+                    <p>
+                        <a href="tel:+254720500058" class="text-white" itemprop="telephone">0720500058</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="contact-info">
+                    <h5><i class="fas fa-envelope me-2"></i>Email</h5>
+                    <p>
+                        <a href="mailto:hello@achisystems.co.ke" class="text-white" itemprop="email">hello@achisystems.co.ke</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="mb-0">Visit our main website: 
+                    <a href="https://achisystems.co.ke" class="text-white" itemprop="url">achisystems.co.ke</a>
+                </p>
+            </div>
+        </div>
+        
+        <!-- Hidden schema data for better SEO -->
+        <meta itemprop="name" content="Achi Systems">
+        <meta itemprop="priceRange" content="$$">
+        <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+            <meta itemprop="latitude" content="-1.2634">
+            <meta itemprop="longitude" content="36.8046">
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
